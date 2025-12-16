@@ -1,144 +1,124 @@
-def firstDay(days):
-    print("On the first day of christmas my true love gave to me");
-    firstDayBody(day)
-    
-def firstDayBody(day):
+def firstDayBody(days):
     print("And a patridge in a pear tree")
 
+
+def firstDay(days):
+    print("On the first day of christmas my true love gave to me")
+    firstDayBody(days)
+    
 
 
 def secondDay(days):
     print("On the second day of christmas my true love gave to me")
-    secondDayBody(day)
+    secondDayBody(days)
     
-def secondDayBody(day):
+def secondDayBody(days):
     print("Two turtle doves")
-    firstDayBody(day)
+    firstDayBody(days)
 
 
 
 def thirdDay(days):
     print("On the third day of christmas my true love gave to me")
-    thirdDayBody(day)
+    thirdDayBody(days)
 
-def thirdDayBody(day):
+def thirdDayBody(days):
     print("Three french hens")
-    secondDayBody(day)
+    secondDayBody(days)
 
 
 
 def fourthDay(days):
     print("On the fourth day of christmas my true love gave to me")
-    fourthDayBody(day)
+    fourthDayBody(days)
 
-def fourthDayBody(day):
+def fourthDayBody(days):
     print("Four colly birds")
-    thirdDayBody(day)
+    thirdDayBody(days)
 
 
 
 
 def fifthDay(days):
     print("On the fifth day of christmas my true love gave to me")
-    fifthDayBody(day)
+    fifthDayBody(days)
 
-def fifthDayBody(day):
+def fifthDayBody(days):
     print("Five golden rings")
-    fourthDayBody(day)
+    fourthDayBody(days)
 
 
 
 def sixthDay(days):
     print("On the sixth day of christmas my true love gave to me")
-    sixthDayBody(day)
+    sixthDayBody(days)
 
-def sixthDayBody(day):
+def sixthDayBody(days):
     print("Six geese a-laying")
-    fifthDayBody(day)
+    fifthDayBody(days)
 
 
 
 def seventhDay(days):
     print("On the seventh day of christmas my true love gave to me")
-    seventhDayBody(day)
+    seventhDayBody(days)
 
-def seventhDayBody(day):
+def seventhDayBody(days):
     print("Seven swans a-swimming")
-    sixthDayBook(day)
+    sixthDayBody(days)
 
 
 
 
 def eightDay(days):
     print("On the eight day of christmas my true love gave to me")
-    eightDayBody(day)
+    eightDayBody(days)
 
-def eightDayBody(day):
+def eightDayBody(days):
     print("Eight maids a-milking")
-    seventhDayBody(day)
+    seventhDayBody(days)
 
 
 
 
 def ninthDay(days):
     print("On the ninth day of christmas my true love gave to me")
-    ninthDayBody(day)
+    ninthDayBody(days)
 
-def ninthDayBody(day):
+def ninthDayBody(days):
     print("Nine ladies dancing")
-    eightDayBody(day)
+    eightDayBody(days)
 
 
 
 
 def tenthDay(days):
     print("On the tenth day of christmas my true love gave to me")
-    tenthDayBody(day)
+    tenthDayBody(days)
 
-def tenthDayBody(day):
+def tenthDayBody(days):
     print("Ten lords a-leaping")
-    ninthDayBody(day)
+    ninthDayBody(days)
 
 
 
 
 def eleventhDay(days):
     print("On the eleventh day of christmas my true love gave to me")
-    eleventhDayBody(day)
+    eleventhDayBody(days)
 
-def eleventhDayBody(day):
+def eleventhDayBody(days):
     print("Eleven pipers piping")
-    tenthDayBody(day)
+    tenthDayBody(days)
 
 
 
 def twelfthDay(days):
     print("On the twelfth day of christmas my true love gave to me")
-    twelfthDayBody(day)
+    twelfthDayBody(days)
 
-def twelfthDayBody(day):
+def twelfthDayBody(days):
     print("Twelve drummers drumming")
-    eleventhDayBody(day)
+    eleventhDayBody(days)
     print("SEE YOU NEXT TIME 🤪️")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
