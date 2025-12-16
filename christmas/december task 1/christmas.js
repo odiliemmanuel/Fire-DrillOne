@@ -102,7 +102,7 @@ twelfthDay();
 
     
       function  ninthDay(){
-        console.log("On the eight day of christmas my true love sent to me");
+        console.log("On the ninth day of christmas my true love sent to me");
         ninthDayBody();
     }
 
@@ -114,7 +114,7 @@ twelfthDay();
     
     
      function  tenthDay(){
-        console.log("On the eight day of christmas my true love sent to me");
+        console.log("On the tenth day of christmas my true love sent to me");
         tenthDayBody();
     }
 
@@ -125,7 +125,7 @@ twelfthDay();
 
      
      function  eleventhDay(){
-        console.log("On the eight day of christmas my true love sent to me");
+        console.log("On the eleventh day of christmas my true love sent to me");
         eleventhDayBody();
     }
 
@@ -137,7 +137,7 @@ twelfthDay();
 
 
     function  twelfthDay(){
-        console.log("On the eight day of christmas my true love sent to me");
+        console.log("On the twelfth day of christmas my true love sent to me");
         twelfthDayBody();
         console.log("SEE YOU NEXT TIME 🥳️");
     }

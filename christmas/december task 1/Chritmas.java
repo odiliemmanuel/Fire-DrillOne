@@ -106,7 +106,7 @@ import java.util.Scanner;
 
     
       public static void ninthDay(){
-        System.out.println("On the eight day of christmas my true love sent to me");
+        System.out.println("On the ninth day of christmas my true love sent to me");
         ninthDayBody();
     }
 
@@ -118,7 +118,7 @@ import java.util.Scanner;
     
     
      public static void tenthDay(){
-        System.out.println("On the eight day of christmas my true love sent to me");
+        System.out.println("On the tenth day of christmas my true love sent to me");
         tenthDayBody();
     }
 
@@ -129,7 +129,7 @@ import java.util.Scanner;
 
      
      public static void eleventhDay(){
-        System.out.println("On the eight day of christmas my true love sent to me");
+        System.out.println("On the eleventh day of christmas my true love sent to me");
         eleventhDayBody();
     }
 
@@ -141,7 +141,7 @@ import java.util.Scanner;
 
 
     public static void twelfthDay(){
-        System.out.println("On the eight day of christmas my true love sent to me");
+        System.out.println("On the twelfth day of christmas my true love sent to me");
         twelfthDayBody();
         System.out.println("SEE YOU NEXT TIME 🥳️");
     }
