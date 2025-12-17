@@ -14,9 +14,12 @@ public class KataM {
 
     public static int factorOfInteger(int number){                     
         int totalOfFactor = 0;
-        for(int count = 1; count <= number; count ++){
+        for(int count = 2; count <= number; count ++){
             if(number % count == 0){
                 totalOfFactor += 1;
+            }
+            if(number / number == 1) {
+              System.out.print(number);
             }
         }
         return totalOfFactor; 
@@ -76,6 +79,77 @@ public class KataM {
         }
     
         
+
+
+
+
+        public static boolean perfectNumber(int number) {
+
+            int sumFactor = 0;
+
+        for(int count = 1; count < number; count ++){
+            if (number % count == 0){
+                    sumFactor += count;
+                }
+        }
+               return sumFactor == number;
+                    
+          
+        }
+
+                   
+            public static int addition(int number){
+            
+          
+                int separator = 0;
+               int sum = 0;
+                while(number > 0){
+
+                separator += number % 10;
+                number /= 10;
+                
+                
+            }
+                return separator;
+            }
+                public static int sumDigit(int number){
+                                
+                 int separator = 0;
+                int sum = 0;
+                
+                
+                while (number > 0) {                
+                separator = number % 10;
+                sum += separator;
+               
+                number= number / 10;
+
+           
+              }
+                System.out.println("Sum of digits = " + sum);
+
+    
+                }
+              
+                
+           
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
