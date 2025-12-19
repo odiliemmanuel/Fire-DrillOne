@@ -8,12 +8,12 @@ def division(first_number, second_number):
     result = first_number / second_number;
 
     if(result == 0):
-        return 0;
+        return 0
 
     return result;
 
-first_number = 0;
+first_number = 0
 
-second_number = 0;
+second_number = 0
 
-print(division(first_number, second_number));
+print(division(first_number, second_number))
