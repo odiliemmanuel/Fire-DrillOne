@@ -186,7 +186,7 @@ print("====================================================================")
 print("\tITEM\t\tQTY\t\tPRICE\t\tTOTAL(NGN)")
 print("--------------------------------------------------------------------")
 
-if(len(item_list) == len(size_list) and len(item_list) and len(price_list) and len(item_list) and len(total_list)):
+if(len(item_list) == len(size_list) and len(item_list) == len(price_list) and len(item_list) == len(total_list)):
 
     for count in range(0,len(item_list)):
 
