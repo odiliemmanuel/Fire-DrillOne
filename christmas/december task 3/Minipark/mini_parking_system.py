@@ -53,18 +53,27 @@ def remove_car(my_slot):
      
 
         if(index >= 0 and index <= 19):
-            if(my_slot[index] != "empty" and type_of_car == my_slot[index]):
-                my_slot.pop[index]
+            while(my_slot[index] != "empty" and type_of_car == my_slot[index]):
+                my_slot.pop(index)
                 print("Car Successfully Removed")
 
                 answer = str(input("Any other customer "))
                 
         
-            elif(my_slot[index] == "empty"):
-                print("Wrong Entry, no vehicle parked there")                    
+        if(my_slot[index] == "empty"):
+            print("Wrong Entry, no vehicle parked there") 
+
+        if(type_of_car != my_slot[index]):
+            print("Car parked and position doesn't match")                  
             
         else:
             print("Index out bounds")
+
+    
+        if(answer.lower() == condition):
+            print("\nCondition, PHEWW😪️ time to watch flash\n")
+         
+
         
 
  
@@ -111,22 +120,15 @@ while(answer.lower() != remove or answer.lower() != park):
     else:
         print("Invalid Input")
 
-
-
-#    for index, element in enumerate(my_slot):
-#
-#        print(index, element)
-#
-#        break
+   
 
 
 
 
 
+for element in my_slot:               
 
-# for element in my_slot               
-#
-#    print("|| ",element, " || ")
+    print(f"|| {element}  || ")
 
 
 

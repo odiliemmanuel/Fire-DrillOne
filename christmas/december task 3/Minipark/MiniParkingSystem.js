@@ -5,25 +5,27 @@ function addCar(mySlot){
     let condition = "no";
     let answer = "";
 
-    while(answer.toLower() != condition){
+    while(answer.toLowerCase() != condition){
 
         typeOfCar = prompt("Enter car type ");
       
-        index = prompt(Number("Enter position between (0 - 19) "));
+        index = Number(prompt("Enter position between (0 - 19) "));
 
         while(mySlot[index] != "empty"){
             console.log("Position is occupied");
-            index = prompt(Number("Enter position between (0 - 19) "));
+            index = Number(prompt("Enter position between (0 - 19) "));
         
         }
 
         if(mySlot[index] == "empty"){
             mySlot[index] = typeOfCar;
+            console.log("Vehicle entered Successfully")
+            
 
             answer = prompt("Any other customer (yes) or (no) ");
          }             
     
-        if(answer.toLower() == condition){
+        if(answer.toLowerCase() == condition){
             console.log("\nCondition, PHEWW😪️ time to watch flash\n");
          }
 
@@ -41,38 +43,45 @@ function removeCar(mySlot){
     condition = "no";
     answer = "";
 
-    while(answer.toLower() != condition){
+    while(answer.toLowerCase() != condition){
 
-        let typeOfCar = prompt("Enter Car Type ")
+        let typeOfCar = prompt("Enter Car Type:  ")
        
 
-        let index = prompt(Number("Enter the position in which it was parked "))
+        let index = Number(prompt("Enter the position in which it was parked:  "))
      
 
-        if(index >= 0 && index <= 19){
-            if(mySlot[index] != "empty" && typeOfCar == mySlot[index]){
-                mySlot.pop[index];
-                console.log("Car Successfully Removed");
-            }
+        while(mySlot[index] == "empty"){
 
+            console.log("No car Parked There");
 
-                let answer = prompt("Any other customer ");
-                
-        
-           if(mySlot[index] == "empty"){
-                console.log("Wrong Entry, no vehicle parked there");
-            } 
-
-        }                   
+            index = Number(prompt("Enter the position in which it was parked:  "))
             
-        else{
-            console.log("Index out bounds");
         }
-   }
- 
-    return mySlot;
 
- }
+        if(mySlot[index] != "empty"){
+
+            mySlot.splice(index,1)
+
+            console.log("Car Removed Successfully");
+       
+          answer = prompt("Any other customer (yes) or (no):  ");
+
+         }             
+    
+        if(answer.toLowerCase() == condition){
+            console.log("\nCondition, PHEWW😪️ time to watch flash\n");
+         }
+
+    }                        
+                           
+    return mySlot;
+ 
+    }
+
+
+
+
 
 
 
@@ -88,7 +97,7 @@ let park = "park";
 let answer = "";
 
      for(count = 0; count < size; count ++){
-         mySlot.add("empty");
+         mySlot.push("empty");
      }
 
     mySlot[0] = "camry";
@@ -100,17 +109,17 @@ let answer = "";
 
     console.log("Welcome to FLASH'S mini park\n");
 
-    while(answer.toLower() != remove || answer.toLower() != park){
+    while(answer.toLowerCase() != remove || answer.toLowerCase() != park){
        answer = prompt("Do you want to (park) or (remove) your car ");
 
 
-        if(answer.toLower() == park){
+        if(answer.toLowerCase() == park){
             console.log(addCar(mySlot))
             break
         }   
         
 
-        if(answer.toLower() == remove){
+        if(answer.toLowerCase() == remove){
             console.log(removeCar(mySlot));
             break
          }   
