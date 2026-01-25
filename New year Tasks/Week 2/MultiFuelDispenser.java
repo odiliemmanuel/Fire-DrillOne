@@ -1,15 +1,19 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Arrays;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 public class MultiFuelDispenser{
-
+    
+     static Scanner input = new Scanner(System.in);
      static ArrayList<String> transactions = new <String> ArrayList();
      static String productName = "";
+     static int pricePerLitre = 0;
 
 
 
-    public static int mainMenu(Scanner input){
+    public static int mainMenu(){
 
         String menu = """
         Welcome to GBeda Station !!
@@ -40,9 +44,9 @@ public class MultiFuelDispenser{
 
 
 
-    public static int petroleumMenu(Scanner input){
+    public static int petroleumMenu(){
         
-        int option = mainMenu(input);
+        int option = mainMenu();
         int petroleumOption = 0;
         
 
@@ -69,11 +73,18 @@ public class MultiFuelDispenser{
             case 2:
                   System.out.println("Show Transaction History");
                   System.out.println("Loading transaction history>>>>>>>>>");
-       
+                    
+                                
+                    LocalDateTime currentDate = LocalDateTime.now();
+
+                    DateTimeFormatter datePattern = DateTimeFormatter.ofPattern("dd/MM/yyyy H:mm");
+
+                    String dateOutput = currentDate.format(datePattern);
 
                      for(int count = 0; count < transactions.size(); count ++)
 
                     System.out.println("==================================================\n" + transactions.get(count));
+                    System.out.println(dateOutput);
                     System.out.println("==================================================\n");break;
 
                   
@@ -102,9 +113,9 @@ public class MultiFuelDispenser{
 
 
 
-    public static int petrolMenu(Scanner input){
+    public static int petrolMenu(){
 
-        int petroleumOption = petroleumMenu(input);
+        int petroleumOption = petroleumMenu();
         int buyingType = 0;
         
        
@@ -124,6 +135,7 @@ public class MultiFuelDispenser{
                    """;
                   System.out.println(buyingOption);
                     productName = "Petrol";
+                    pricePerLitre = 650;
                   System.out.println("Litre or amount for " + productName);
                   System.out.print("Enter any option 1 or 2: ");
                      buyingType = input.nextInt();
@@ -144,6 +156,7 @@ public class MultiFuelDispenser{
                    """;
                   System.out.println(buyingOption);
                   productName = "Diesel";
+                  pricePerLitre = 720;
                   System.out.println("Litre or amount for " + productName);
                   System.out.print("Enter any option 1 or 2: ");
                      buyingType = input.nextInt();
@@ -165,6 +178,7 @@ public class MultiFuelDispenser{
                    """;
                   System.out.println(buyingOption);
                     productName = "Kerosene";
+                    pricePerLitre = 550;
                   System.out.println("Litre or amount for " + productName);
                   System.out.print("Enter any option 1 or 2: ");
                      buyingType = input.nextInt();
@@ -184,6 +198,7 @@ public class MultiFuelDispenser{
                    """;
                   System.out.println(buyingOption);
                     productName = "Gas";
+                    pricePerLitre = 480;
                   System.out.println("Litre or amount for " + productName);
                   System.out.print("Enter any option 1 or 2: ");
                      buyingType = input.nextInt();
@@ -208,12 +223,11 @@ public class MultiFuelDispenser{
 
 
 
-    public static String sellingCalculation(Scanner input){
-        int buyingType = petrolMenu(input);
+    public static String sellingCalculation(){
+        int buyingType = petrolMenu();
         int amount = 0; 
         int litres = 0;
         String record = "";
-
 
         switch(buyingType){
 
@@ -221,17 +235,23 @@ public class MultiFuelDispenser{
                 System.out.println("Litre");
                 System.out.print("How many litres are you buying(650/L): ");
                     litres = input.nextInt();
+                    while(litres < 0 && litres > 50){
+
+                        System.out.println("Invalid Entry, number of litres must be within the space of 1 to 50");
+                        litres = input.nextInt();
+                    }
+        
                       amount = litres * 650;
 
                  System.out.println("==================================================");               
-                 record = String.format("Product: %s%nAmount: $%d%nLitre:%dlitres%n",productName, amount, litres);
+                 record = String.format("Product: %s%nAmount: $%d%nLitre: %dlitres%n",productName, amount, litres);
                  System.out.println(record);
                  transactions.add(record);
                  System.out.println("Transactions now contains " + transactions.size() + " items.");
                  System.out.println("Thank you for your Patronage");
                  System.out.println("==================================================\nSaving Transaction History...");
                  
-                 String selling = sellingCalculation(input);
+                 String selling = sellingCalculation();
                     break;
     
 
@@ -239,16 +259,23 @@ public class MultiFuelDispenser{
                    System.out.println("Amount");
                    System.out.print("How much " + productName +  " are you buying(650/L):  ");
                        amount = input.nextInt();
+
+                        while(amount < 650 && amount){
+
+                            System.out.println("Amount should be greater than litre");
+                              amount = input.nextInt();
+                         }
+
                        litres = amount/650;
 
                     System.out.println("============================================");
-                     record = String.format("\nProduct: %s%nAmount:$%d%nLitre:%dlitres%n",productName, amount, litres);
+                     record = String.format("\nProduct: %s%nAmount: $%d%nLitre: %dlitres%n",productName, amount, litres);
                      System.out.println(record);
                      transactions.add(record);
                      System.out.println("Thank you for your Patronage");
                      System.out.println("============================================\nSaving Transaction History...");
 
-                      selling = sellingCalculation(input);
+                      selling = sellingCalculation();
 
                      break;
                 
@@ -272,10 +299,16 @@ public class MultiFuelDispenser{
 
 
 
+    public static int calculatingLitresForPetrol(int litres){
+
+        int amount = litres * 650;
+
+        return amount;
+        
+    }
 
 
-
-
+    public static int calculatingAmountForPetrol
 
 
 
