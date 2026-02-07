@@ -5,42 +5,37 @@ import java.util.Scanner;
 
            int number = 0;
            System.out.print(isPrime(number));
+
         }
             
 
-        public static boolean isPrime(int number){
+            public static boolean isPrime(int number){
 
-            Scanner input = new Scanner(System.in);
+                Scanner input = new Scanner(System.in);
 
-            System.out.println("Enter any Integer");
-              number = input.nextInt();
+                System.out.println("Enter any Integer");
+                  number = input.nextInt();
 
-            int factor = 0;
-            int result = 0;
-        
-            for(int count = 2; count <= number; count ++) {
-                if(number % count == 0) {
-                  result = number / count;
-                    factor += count;
+                int factor = 0;
+                int result = 0;
 
-                     
-             if(result  == 1) {
-                      return true;                
-                 }
-               
-               
-               return false;   
-            
+                for(int count = 2; count <= number; count ++) {
+                    if (number % count == 0) {
+                        result = number / count;
+                        factor += count;
 
-                 }
-                
-               
-              
-                 }
- 
-                
-          
+                    }
+                    if (result == 1) {
+                        return true;
+                    }
+                }
 
-    }
+                   return false;
 
-    }
+
+                     }
+
+
+
+            }
+
